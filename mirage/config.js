@@ -27,7 +27,5 @@ export default function(server) {
   this.get('/customers');
   this.get('/customers/:id');
   this.get('/premises/:id');
-  this.post('/customers', {
-    
-  });
+  this.post('/customers');
 }
