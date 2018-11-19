@@ -1,14 +1,9 @@
-{{outlet}}
 
 <div class="container table-responsive">
   <div clsss="">
-    <h1> Customers</h1>
-    <div>
-      {{!-- {{#link-to 'new-customer' class="btn btn-primary"}}
-        Create New Customer
-      {{/link-to}} --}}
-    </div>
+    <h1>{{#link-to 'application'}}Customers{{/link-to}}</h1>
   </div>
+
   <table class="table">
     <thead>
       <th>id</th>
@@ -23,12 +18,21 @@
           <td>{{customer.name}}</td>
           <td>{{customer.email}}</td>
           <td>
-             {{#link-to 'customer.premises' customer class="btn btn-info"}}
-                View premises
-              {{/link-to}}
+            {{#link-to 'customer.premises' customer class="btn btn-info"}}
+              View premises
+            {{/link-to}}
           </td>
         </tr>
       {{/each}}
     </tbody>
   </table>
+
+  <div>
+    {{#link-to 'create' class=""}}
+      Create New
+    {{/link-to}}
+  </div>
+  <br>
+
+  {{outlet}}
 </div>

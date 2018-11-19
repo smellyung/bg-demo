@@ -1,0 +1,46 @@
+
+
+<td>{{customer.id}}</td>
+
+<td>{{customer.name}}</td>
+
+<td>{{customer.email}}</td>
+
+<td>
+  {{#link-to 'customer.premises' customer class="btn btn-info"}}
+    View premises
+  {{/link-to}}
+</td>
+
+
+{{!-- <form {{action "createCustomer" on="submit"}}>
+  <table class="table">
+    <tr>
+      <td>Name</td>
+      <td>
+        {{input type="text" value=model.name class="form-control"}}
+      </td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>
+        {{input type="text" value=model.email class="form-control"}}
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button
+          class="btn btn-primary"
+          type="submit"
+        >
+          Create Customer
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+</form> --}}
