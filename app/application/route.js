@@ -1,7 +1,7 @@
 import Route from '@ember/routing/route';
 
 export default class IndexRoute extends Route {
-  model() {
-    return this.store.findAll('customer');
+  redirect() {
+    this.transitionTo('customers')
   }
 }
