@@ -13,16 +13,18 @@
     </thead>
     <tbody>
       {{#each model as |customer|}}
-        <tr>
-          <td>{{customer.id}}</td>
-          <td>{{customer.name}}</td>
-          <td>{{customer.email}}</td>
-          <td>
-            {{#link-to 'customer.premises' customer class="btn btn-info"}}
-              View premises
-            {{/link-to}}
-          </td>
-        </tr>
+        {{#if customer.id}}
+          <tr>
+            <td>{{customer.id}}</td>
+            <td>{{customer.name}}</td>
+            <td>{{customer.email}}</td>
+            <td>
+              {{#link-to 'customer.premises' customer class="btn btn-info"}}
+                View premises
+              {{/link-to}}
+            </td>
+          </tr>
+        {{/if}}
       {{/each}}
     </tbody>
   </table>
