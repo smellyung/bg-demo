@@ -11,9 +11,9 @@ export default class NewCustomerRoute extends Route {
     const customer = this.modelFor(this.routeName);
 
     customer.save().then(() => {
-      this.transitionTo('/');
-    }).catch((reason) => {
-      throw reason;
+      this.transitionTo('customers.index');
+    }).catch((err) => {
+      throw new Error(err)
     });
   }
 }

@@ -1,5 +1,5 @@
 
-export default function() {
+export default function(server) {
 
   // These comments are here to help you get started. Feel free to delete them.
 
@@ -27,5 +27,7 @@ export default function() {
   this.get('/customers');
   this.get('/customers/:id');
   this.get('/premises/:id');
-  this.post('/customers');
+  this.post('/customers', {
+    
+  });
 }
