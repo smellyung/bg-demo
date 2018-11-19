@@ -10,7 +10,7 @@ Router.map(function() {
   this.route('customer', {path: '/:customer_id/premises'}, function() {
     this.route('premises');
   });
-  this.route('new-customer');
+  //this.route('new-customer');
 });
 
 export default Router;
