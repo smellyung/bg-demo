@@ -8,9 +8,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('customers', function() {
-    this.route('index', {path: '/'}, function() {
-      this.route('create');
-    });
+    this.route('index', {path: '/'});
     this.route('customer', {path: '/:customer_id/premises'}, function() {
       this.route('premises', {path: '/'});
     });
