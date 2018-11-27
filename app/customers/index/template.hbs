@@ -5,8 +5,6 @@
     <h1>Customers</h1>
     <br>
 
-    <!-- link to create -->
-
     <br>
 
     {{outlet}}
@@ -20,18 +18,16 @@
       </thead>
       <tbody>
         {{#each model as |customer|}}
-          {{#if customer.id}}
-            <tr>
-              <td>{{customer.id}}</td>
-              <td>{{customer.name}}</td>
-              <td>{{customer.email}}</td>
-              <td>
-                {{#link-to 'customers.customer.premises' customer class="btn"}}
-                  View premises
-                {{/link-to}}
-              </td>
-            </tr>
-          {{/if}}
+          <tr>
+            <td>{{customer.id}}</td>
+            <td>{{customer.name}}</td>
+            <td>{{customer.email}}</td>
+            <td>
+              {{#link-to 'customers.customer.premises' customer class="btn"}}
+                View premises
+              {{/link-to}}
+            </td>
+          </tr>
         {{/each}}
       </tbody>
     </table>
