@@ -1,11 +1,11 @@
-
-<div class="col-lg-6">
-  {{input type="text" value=model.name class="form-control" placeholder="Name"}}
-  <br>
-  {{input type="text" value=model.email class="form-control" placeholder="Email"}}
-  <br>
-
-  <div>
+<div class="row">
+  <div class="col-lg-5">
+    {{input type="text" value=model.name class="form-control" placeholder="Name"}}
+  </div>
+  <div class="col-lg-5">
+    {{input type="text" value=model.email class="form-control" placeholder="Email"}}
+  </div>
+  <div class="col-lg-2">
     <button {{action "createCustomer"}}
       class="btn btn-primary"
       type="submit"
@@ -13,6 +13,6 @@
       Confirm
     </button>
   </div>
-
-  <br>
 </div>
+
+<br>
