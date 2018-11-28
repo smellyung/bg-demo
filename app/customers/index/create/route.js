@@ -3,12 +3,16 @@ import {action} from '@ember-decorators/object';
 
 export default class NewCustomerRoute extends Route {
   model() {
-    return this.store.createRecord('customer');
+    return {
+      name: '',
+      email: ''
+    }
   }
 
   @action
   createCustomer() {
-    const customer = this.modelFor(this.routeName);
+    const data = this.modelFor(this.routeName);
+    const customer = this.store.createRecord('customer', data);
 
     customer.save().then(() => {
       this.transitionTo('customers.index');
