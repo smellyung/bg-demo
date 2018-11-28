@@ -20,22 +20,20 @@
         <th>id</th>
         <th>name</th>
         <th>email</th>
-        <th>Action</th>
+        <th>action</th>
       </thead>
       <tbody>
         {{#each model as |customer|}}
-          {{#if customer.id}}
-            <tr>
-              <td>{{customer.id}}</td>
-              <td>{{customer.name}}</td>
-              <td>{{customer.email}}</td>
-              <td>
-                {{#link-to 'customers.customer.premises' customer class="btn"}}
-                  View premises
-                {{/link-to}}
-              </td>
-            </tr>
-          {{/if}}
+          <tr>
+            <td>{{customer.id}}</td>
+            <td>{{customer.name}}</td>
+            <td>{{customer.email}}</td>
+            <td>
+              {{#link-to 'customers.customer.premises' customer class="btn"}}
+                View premises
+              {{/link-to}}
+            </td>
+          </tr>
         {{/each}}
       </tbody>
     </table>
